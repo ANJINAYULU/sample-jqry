@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8s-jqry
+  namespace: jqry
+spec:
+  selector:
+    matchLabels:
+      app: jqry
+  replicas: 5 # tells deployment to run 2 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: jqry
+    spec:
+      containers:
+      - name: jqry
+        image: 274401088258.dkr.ecr.ap-southeast-1.amazonaws.com/sample-jqry:4
+
+        ports:
+        - containerPort: 80
