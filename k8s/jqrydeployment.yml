@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: jqry
-        image: 274401088258.dkr.ecr.ap-southeast-1.amazonaws.com/sample-jqry:4
+        image: public.ecr.aws/h3u1y5t3/sample-jqry:latest
 
         ports:
         - containerPort: 80
